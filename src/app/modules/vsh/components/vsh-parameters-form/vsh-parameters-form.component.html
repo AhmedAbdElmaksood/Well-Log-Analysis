@@ -1,0 +1,17 @@
+<div class="graphContainner">
+    <h1>Parameters</h1>
+    <hr>
+    <div class="labelInput">
+        <label for="max" class="col-form-label">Max GR: </label>
+        <input class="form-control" [(ngModel)]="maxGr" id="max" min="0" type="number" required value=0 step=any name="max" />
+    </div>
+    <div class="labelInput">
+        <label for="min" class="col-form-label">Min GR: </label>
+        <input class="form-control" [(ngModel)]="minGr" id="min" min="0" type="number" required value=0 step=any name="min" />
+    </div>
+    <div class="buttons">
+        <button class="btn btn-primary" type="button" id="go" routerLink="/vsh/vsh-equations">Go</button>
+        <button class="btn btn-primary" type="button" id="submit" (click)="submit()">Submit</button>
+        <button class="btn btn-success" type="button" id="Reset" (click)="reset()">Reset</button>
+    </div>
+</div>

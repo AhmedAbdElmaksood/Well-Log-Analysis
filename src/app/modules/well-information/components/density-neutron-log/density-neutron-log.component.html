@@ -1,0 +1,13 @@
+<div class="graphContainner">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Density" (changeGraphSettings)="densityGraphSettingChange($event)"
+            (defaultSettings)="densityDefaultSettings()" [title]="'Edit Density Log'" [id]="'density'" [color]="densityColor"
+            [minScale]="densityMinScale" [maxScale]="densityMaxScale" [theme]="theme" [logType]="'Density'"></app-log-control>
+        <app-log-control *ngIf="this.columnOrder.Neutron" (changeGraphSettings)="neutronGraphSettingChange($event)"
+            (defaultSettings)="neutronDefaultSettings()" [title]="'Edit Neutron Log'" [id]="'neutron'"
+            [color]="neutronColor" [minScale]="neutronMinScale" [maxScale]="neutronMaxScale" [theme]="theme"
+            [logType]="'Neutron'" style="float: right;">
+        </app-log-control>
+    </div>
+    <ng-content></ng-content>
+</div>

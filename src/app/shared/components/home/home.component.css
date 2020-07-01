@@ -1,0 +1,43 @@
+.spad {
+ 
+    padding-bottom: 0px;
+}
+
+.hero-section{
+    max-width: 100%;
+}
+.owl-carousel.owl-drag .owl-item{
+    width: 13%;
+}
+@media (max-width: 376px) {
+    .hero-slider .owl-item.active .hero-item h2{
+        width: 15%;
+        font-size: 20px;
+    }
+   
+}
+@media (max-width: 576px) {
+    .hero-slider .owl-item.active .hero-item h2{
+        width: 30%;
+    }
+    .owl-carousel.owl-drag .owl-item{
+        width: 10%;
+    }
+    .edit-Container{
+        width: 95%;
+    }
+   
+}
+
+@media (max-width: 900px){
+    .edit-responsive{
+        margin: 0;
+    }
+    .service-item{
+        padding-left: 20%;
+        padding-right: 0;
+    }
+    
+}
+
+

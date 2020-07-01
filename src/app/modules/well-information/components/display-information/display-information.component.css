@@ -1,0 +1,49 @@
+.noDataFoundContainer{
+    width: 30%;
+    height: 67vh;
+    margin: auto;
+    text-align: center;
+}
+
+.noDataFoundContainer h3{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.noDataFoundContainer img{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 3vh;
+}
+
+.collapseContainer{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.header{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    color: #007bff;
+}
+
+hr{
+    width: 40%;
+    margin-bottom: 25px;
+}
+
+.card-header{
+    background-color: #081624;
+}
+
+.btn-link{
+    color: aliceblue;
+    font-size: 18px;
+}
+
+i{
+    margin-right: 10px;
+}

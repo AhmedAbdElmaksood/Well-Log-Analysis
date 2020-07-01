@@ -1,0 +1,6 @@
+<div class="graphContainner">
+    <app-log-control *ngIf="this.columnOrder.Dt" class="edit" (changeGraphSettings)="graphSettingChange($event)"
+        (defaultSettings)="defaultSettings()" [title]="'Edit DT Log'" [id]="'dt'" [color]="color" [minScale]="minScale"
+        [maxScale]="maxScale" [theme]="theme" [logType]="'DT'"></app-log-control>
+    <div id="dtId" class="graph"></div>
+</div>

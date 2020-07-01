@@ -1,0 +1,23 @@
+.graphContainner{
+    width:34%;
+    min-width:200px;
+    overflow:hidden; 
+    float:left; 
+    display:block
+}
+
+.graph,#CanvasDiv{
+    height:600vh; 
+}
+
+.edit{    
+    text-align: center;
+    margin-bottom: 5vh;
+    margin-top: 5px;
+    display: block;
+}
+@media (max-width: 900px) {
+    .graph,#CanvasDiv{
+      height:100vh; 
+    }
+   }

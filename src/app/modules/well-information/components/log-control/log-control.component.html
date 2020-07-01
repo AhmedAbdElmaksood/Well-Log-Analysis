@@ -1,0 +1,53 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary edit" data-toggle="modal" [attr.data-target]="'#'+id">
+  Edit {{logType}}
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fa fa-sliders" aria-hidden="true" style="width: 40px;"></i>
+        <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+        <button type="button" class="close" #closebutton data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div style="text-align: left;"  class="modal-body">
+        <div style="margin:10px">
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Min Scale :</label>
+            <input class="form-control" min="0" type="number" [(ngModel)]="minScale" required step=any name="MinScale"
+              placeholder="Min Scale">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Max Scale :</label>
+            <input class="form-control" min="0" type="number" [(ngModel)]="maxScale" required step=any name="MaxScale"
+              aria-describedby="emailHelp" placeholder="Max Scale">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Theme :</label>
+            <input style="margin-left: 30px;" type="radio" name="{{id}}" value="dark1"  [(ngModel)]="theme"  [checked]="theme === 'dark1'"> dark1
+            <input style="margin-left: 30px;" type="radio" name="{{id}}" value="dark2"  [(ngModel)]="theme"  [checked]="theme === 'dark2'"> dark2
+            <input style="margin-left: 30px;" type="radio" name="{{id}}" value="light1" [(ngModel)]="theme" [checked]="theme === 'light1'"> light1
+            <input style="margin-left: 30px;" type="radio" name="{{id}}" value="light2" [(ngModel)]="theme" [checked]="theme === 'light2'"> light2
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Curve Color :</label>
+            <input style="margin-left: 10px;" type="color" [(ngModel)]="color"/>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="default()">Default</button>
+        <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

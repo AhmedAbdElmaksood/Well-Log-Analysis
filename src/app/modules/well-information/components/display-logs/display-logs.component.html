@@ -1,0 +1,22 @@
+<h1 class="header">Log Display</h1>
+<hr>
+
+<div class="graphContainner" *ngIf="!noDataFound">
+    <app-gr-caliper-log *ngIf="columnOrder.Gr || columnOrder.Caliper"></app-gr-caliper-log>
+    <app-sp-log *ngIf="columnOrder.Sp"></app-sp-log>
+    <app-density-neutron-log *ngIf="columnOrder.Density || columnOrder.Neutron" [divId]="'dispalyLogsDensityNeutron'" [enableCross]="false">
+        <div id="dispalyLogsDensityNeutron" class="graph"></div>
+    </app-density-neutron-log>
+    <app-lld-log *ngIf="columnOrder.Lld" [containerWidth]="'20%'" [divId]="'dispalyLogsLld'">
+        <div id="dispalyLogsLld" class="graph"></div>
+    </app-lld-log>
+    <app-dt-log *ngIf="columnOrder.Dt"></app-dt-log>
+</div>
+
+<div *ngIf="noDataFound">
+    <div class="noDataFoundContainer">
+        <img src="../../../../../assets/img/noDataFound.png">
+        <h3>No Related Logs found</h3>
+        <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Logs</button>
+    </div>
+</div>

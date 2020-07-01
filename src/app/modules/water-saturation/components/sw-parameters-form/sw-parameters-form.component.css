@@ -1,0 +1,51 @@
+hr{
+    width: 30%;
+    margin-bottom: 30px;
+   
+}
+
+.noDataFoundContainer{
+    width: 30%;
+    height: 65vh;
+    margin: auto;
+    text-align: center;
+}
+
+.noDataFoundContainer h3{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.noDataFoundContainer img{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 3vh;
+}
+.container,input{
+    margin:auto;
+  
+
+}
+.header{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    color: #007bff;
+}
+label{
+    font-weight: 600;
+}
+.controlContainer{
+    width: 100%;
+}
+.submit{
+    width: 85%;
+}
+
+.swParamsform{
+    width: 25%;
+    margin: auto;
+    margin-bottom: 11vh;
+}

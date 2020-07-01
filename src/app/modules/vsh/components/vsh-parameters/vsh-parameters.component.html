@@ -1,0 +1,20 @@
+<h1 class="header">Vsh Parameters</h1>
+<hr>
+
+<div class="twoGraphContainer" *ngIf="columnOrder?.Gr">
+    <app-gr-log [getCurrent]="false" [enableCrosshair]="true" [id]="'gr'" [containerWidth]="'34%'" [paramiterChangeEvent]="eventsSubject.asObservable()" [divId]="'grCanvasDiv'" [title]="'Edit Gr Log'" [logType]="'GR'" [xAxisTitle]="'GR (API)'">
+        <div style="height:600vh;" id="grCanvasDiv"></div>
+    </app-gr-log>
+    <app-gr-log [getCurrent]="false" [enableCrosshair]="false" [id]="'linear'" [containerWidth]="'34%'"  [paramiterChangeEvent]="eventsSubject.asObservable()" [divId]="'linearCanvasDiv'" [title]="'Edit Linear Response Log'" [logType]="'Linear Response'" [xAxisTitle]="'Vsh (%)'">
+        <div style="height:600vh;" id="linearCanvasDiv"></div>
+    </app-gr-log>
+    <app-vsh-parameters-form (changeParameters)="onParameterChange($event)"></app-vsh-parameters-form>
+</div>
+
+<div *ngIf="!columnOrder?.Gr">
+    <div class="noDataFoundContainer">
+        <img src="../../../../../assets/img/noDataFound.png">
+        <h3>No Related Logs found</h3>
+        <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Logs</button>
+    </div>
+</div>

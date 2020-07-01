@@ -1,0 +1,9 @@
+<div class="graphContainner">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Density && this.columnOrder.Neutron && this.columnOrder.Gr  && this.columnOrder.Lld" (changeGraphSettings)="waterSaturationLogGraphSettingChange($event)"
+            (defaultSettings)="waterSaturationLogDefaultSettings()" [title]="'Edit SW'" [id]="'SW'" [color]="waterSaturationColor"
+            [minScale]="waterSaturationMinScale" [maxScale]="waterSaturationMaxScale" [theme]="theme" [logType]="'SW'"></app-log-control>
+
+    </div>
+    <div id="waterSaturationLogId" class="graph"></div>
+</div>

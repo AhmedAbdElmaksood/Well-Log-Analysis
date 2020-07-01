@@ -1,0 +1,6 @@
+<div class="graphContainner" [style.width]="containerWidth">
+    <app-log-control *ngIf="this.columnOrder.Lld" class="edit" (changeGraphSettings)="graphSettingChange($event)"
+        (defaultSettings)="defaultSettings()" [title]="'Edit LLD Log'" [id]="'lld'" [color]="color"
+        [minScale]="minScale" [maxScale]="maxScale" [theme]="theme" [logType]="'LLD'"></app-log-control>
+    <ng-content></ng-content>
+</div>

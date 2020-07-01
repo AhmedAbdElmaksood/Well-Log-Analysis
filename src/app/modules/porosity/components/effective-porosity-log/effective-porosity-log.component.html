@@ -1,0 +1,8 @@
+<div class="graphContainner" [style.width]="containerWidth">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Density && this.columnOrder.Neutron && this.columnOrder.Gr" (changeGraphSettings)="effectiveLogGraphSettingChange($event)"
+            (defaultSettings)="effectiveLogDefaultSettings()" [title]="'Edit Effective Log'" [id]="'effective'" [color]="effectivePorosityColor"
+            [minScale]="effectivePorosityMinScale" [maxScale]="effectivePorosityMaxScale" [theme]="theme" [logType]="'Effective Porosity'"></app-log-control>
+    </div>
+    <ng-content></ng-content>
+</div>

@@ -1,0 +1,39 @@
+<h1 class="header">Porosity Parameters</h1>
+<hr>
+
+<form *ngIf="!noDataFound" [formGroup]="paramsForm" (ngSubmit)="onSubmit()" class="porosityParamsform">
+  <div class="form-group row">
+    <div class="controlContainer">
+      <label for="example-number-input">Matrix Density:</label>
+      <input formControlName="MD" class="form-control" type="number" [(ngModel)]="MD" id="example-number-input">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="controlContainer">
+      <label for="example-number-input" class="col-form-label">Fluid Density:</label>
+      <input formControlName="FD" class="form-control" type="number" [(ngModel)]="FD" id="example-number-input">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="controlContainer">
+      <label for="example-number-input" class="col-form-label">Neutron Correction:</label>
+      <input formControlName="NC" class="form-control" type="number" [(ngModel)]="NC" id="example-number-input">
+    </div>
+  </div>
+
+  <div class="row">
+    <button type="submit" class="btn btn-primary submit">Submit</button>
+    <a routerLink="/porosity/total-porosity" style="margin-left: 5px;" type="button" class="btn btn-success ">GO</a>
+  </div>
+
+</form>
+
+<div *ngIf="noDataFound">
+  <div class="noDataFoundContainer">
+    <img src="../../../../../assets/img/noDataFound.png">
+    <h3>No Related Logs found</h3>
+    <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Logs</button>
+  </div>
+</div>

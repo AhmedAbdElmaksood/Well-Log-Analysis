@@ -1,0 +1,7 @@
+<div class="graphContainner">
+    <app-log-control *ngIf="this.columnOrder.Sp" class="edit" (changeGraphSettings)="graphSettingChange($event)"
+        (defaultSettings)="defaultSettings()" [title]="'Edit SP Log'" [id]="'sp'" [color]="color" [minScale]="minScale"
+        [maxScale]="maxScale" [theme]="theme" [logType]="'SP'"></app-log-control>
+        
+    <div id="spId" class="graph"></div>
+</div>

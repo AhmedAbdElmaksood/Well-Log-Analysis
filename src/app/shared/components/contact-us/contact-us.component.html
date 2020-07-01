@@ -1,0 +1,183 @@
+	<!-- Header section  -->
+	<header class="header-section clearfix">
+		<h1 class="header">Contact Us</h1>
+		<hr>
+		<div class="site-navbar">
+			<!-- Logo -->
+			<!-- <a href="index.html" class="site-logo">
+				<img src="../../../../assets/img/logo.png" alt="">
+			</a> -->
+			<!-- <div class="header-right">
+				<div class="header-info-box">
+					<div class="hib-icon">
+						<img src="../../../../assets/img/icons/phone.png" alt="" class="">
+					</div>
+					<div class="hib-text">
+						<h6>+546 990221 123</h6>
+						<p>contact@industryalinc.com</p>
+					</div>
+				</div>
+				<div class="header-info-box">
+					<div class="hib-icon">
+						<img src="../../../../assets/img/icons/map-marker.png" alt="" class="">
+					</div>
+					<div class="hib-text">
+						<h6>Main Str, no 23</h6>
+						<p>NY, New York PK 23589</p>
+					</div>
+				</div>
+				<button class="search-switch"><i class="fa fa-search"></i></button>
+			</div> -->
+			<!-- Menu -->
+			<!-- <nav class="site-nav-menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="solutions.html">Solutions</a>
+						<ul class="sub-menu">
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</li>
+					<li><a href="blog.html">Blog</a></li>
+					<li class="active"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav> -->
+
+		</div>
+	</header>
+	<!-- Header section end  -->
+	
+	<!-- Page top section  -->
+	<!-- <section class="page-top-section set-bg" data-setbg="../../../../assets/img/page-top-bg/4.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<h2>Contact</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
+					<a href="" class="site-btn">Say hello</a>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!-- Page top section end  -->
+
+	<!-- Map section  -->
+	<!-- <div class="map-section">
+		<div class="container">
+			<div class="map-info">
+				<img src="../../../../assets/img/logo-contact.png" alt="">
+				<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
+			</div>
+		</div>
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14376.077865872314!2d-73.879277264103!3d40.757667781624285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1546528920522" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div> -->
+	<!-- Map section end  -->
+
+	<!-- Contact section   -->
+	<section class="contact-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="contact-text">
+						<h2>Get in Touch</h2>
+						<p>We Will Be Happy To Hear From You</p>
+						<div class="header-info-box">
+							<div class="hib-icon">
+								<img src="../../../../assets/img/icons/phone.png" alt="" class="">
+							</div>
+							<div class="hib-text">
+								<h6>+20123456789</h6>
+								<p>well-log@industryalinc.com</p>
+							</div>
+						</div>
+						<div class="header-info-box">
+							<div class="hib-icon">
+								<img src="../../../../assets/img/icons/map-marker.png" alt="" class="">
+							</div>
+							<div class="hib-text">
+								<h6>Main Str, no 23</h6>
+								<p>Smartvillage, Cairo</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
+						<div class="row">
+							<div class="col-lg-6">
+								<div *ngIf="submitted && f.username.invalid" class="alert alert-danger">
+									<div *ngIf="submitted && f.username.errors.required">
+										Name is required.
+									</div>
+									<div *ngIf="submitted && f.username.errors.minlength">
+										Name must be at least 4 characters long.
+									</div>
+								</div>
+								<input formControlName="username" type="text" placeholder="Your Name"
+								[class.is-invalid]="f.username.invalid && f.username.touched"
+								minlength="4"
+								>
+							</div>
+							<div class="col-lg-6">
+								<div *ngIf="submitted && f.email.errors" class="alert alert-danger">
+									<div *ngIf="f.email.errors.required">Email is required</div>
+									<div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+								</div>
+								<input formControlName="email" type="text" placeholder="Your Email"
+								[class.is-invalid]="f.email.invalid && f.email.touched"
+								required
+								>
+							</div>
+							<div class="col-lg-4">
+							</div>
+							<div class="col-lg-12">
+								<div>
+									<div *ngIf="submitted && f.subject.errors" class="alert alert-danger">
+										<div *ngIf="f.subject.errors.required">Subject is required</div>
+									</div>
+								<input formControlName="subject" type="text" placeholder="Subject" required>
+							</div>
+							<div>
+								<div *ngIf="submitted && f.message.errors" class="alert alert-danger">
+									<div *ngIf="f.message.errors.required">message is required</div>
+								</div>
+								<textarea formControlName="message" class="text-msg" placeholder="Message" required></textarea>
+							</div>
+								<button class="site-btn" type="submit" >send message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Contact section end  -->
+
+	<!-- Call to action section  -->
+	<section class="cta-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 d-flex align-items-center">
+					<h2>Our App is Easy, Fast and Scalable</h2>
+				</div>
+				<!-- <div class="col-lg-3 text-lg-right" >
+					<a href="#" class="site-btn sb-dark">contact us</a>
+				</div> -->
+			</div>
+		</div>
+	</section>
+	<!-- Call to action section end  -->
+
+	<!-- Search model -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search model end -->	
+	

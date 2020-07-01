@@ -1,0 +1,9 @@
+<div class="graphContainner">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Density" (changeGraphSettings)="densityPorosityGraphSettingChange($event)"
+            (defaultSettings)="densityPorosityDefaultSettings()" [title]="'Edit Density Porosity'" [id]="'densityPorosity'" [color]="densityPorosityColor"
+            [minScale]="densityPorosityMinScale" [maxScale]="densityPorosityMaxScale" [theme]="theme" [logType]="'Density Porosity'"></app-log-control>
+
+    </div>
+    <div id="densityPorosityLogId" class="graph"></div>
+</div>

@@ -1,0 +1,49 @@
+<h1 class="header">Sw Parameters</h1>
+<hr>
+
+<form *ngIf="!noDataFound" [formGroup]="parametersForm" (ngSubmit)="onSubmit()" class="swParamsform">
+  <div class="form-group row">
+    <div class="controlContainer">
+      <label for="example-number-input">a ( saturation exponent ):</label>
+      <input formControlName="a" class="form-control" type="number" [(ngModel)]="swParameters.a"
+        id="example-number-input">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="controlContainer">
+      <label for="example-number-input" class="col-form-label">m ( cementation factor ):</label>
+      <input formControlName="m" class="form-control" type="number" [(ngModel)]="swParameters.m"
+        id="example-number-input">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="controlContainer">
+      <label for="example-number-input" class="col-form-label">n ( saturation exponent ):</label>
+      <input formControlName="n" class="form-control" type="number" [(ngModel)]="swParameters.n"
+        id="example-number-input">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="controlContainer">
+      <label for="example-number-input" class="col-form-label">Rw ( formation water resistivity ):</label>
+      <input min="0.1" formControlName="Rw" class="form-control" type="number" [(ngModel)]="swParameters.Rw"
+        id="example-number-input">
+    </div>
+  </div>
+
+  <div class="row">
+    <button type="submit" class="btn btn-primary submit">Submit</button>
+    <a routerLink="/water-saturation/calculate-saturation" style="margin-left: 5px;" type="button"
+      class="btn btn-success">GO</a>
+  </div>
+
+</form>
+<div *ngIf="noDataFound">
+  <div class="noDataFoundContainer">
+    <img src="../../../../../assets/img/noDataFound.png">
+    <h3>No Related Logs found</h3>
+    <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Logs</button>
+  </div>
+</div>

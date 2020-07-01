@@ -1,0 +1,20 @@
+<h1 class="header">Total Porosity</h1>
+<hr>
+
+<div class="logsContainer" *ngIf="columnOrder?.Gr || columnOrder?.Caliper || columnOrder?.Neutron || columnOrder?.Density">
+    <app-gr-caliper-log *ngIf="columnOrder.Gr || columnOrder.Caliper"></app-gr-caliper-log>
+    <app-neutron-log *ngIf="columnOrder.Neutron"></app-neutron-log>
+    <app-density-log *ngIf="columnOrder.Density"></app-density-log>
+    <app-density-porosity-log *ngIf="columnOrder.Density"></app-density-porosity-log>
+    <app-total-porosity-log *ngIf="columnOrder.Density && columnOrder.Neutron" [divId]="'totalPorosityLogId'">
+        <div id="totalPorosityLogId" class="graph"></div>
+    </app-total-porosity-log>
+</div>
+
+<div *ngIf="!columnOrder?.Gr && !columnOrder?.Caliper && !columnOrder?.Neutron && !columnOrder?.Density">
+    <div class="noDataFoundContainer">
+        <img src="../../../../../assets/img/noDataFound.png">
+        <h3>No Related Logs found</h3>
+        <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Logs</button>
+    </div>
+</div>

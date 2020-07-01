@@ -1,0 +1,9 @@
+<div class="graphContainner">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Neutron" (changeGraphSettings)="neutronGraphSettingChange($event)"
+            (defaultSettings)="neutronDefaultSettings()" [title]="'Edit Neutron Log'" [id]="'neutron'" [color]="neutronColor"
+            [minScale]="neutronMinScale" [maxScale]="neutronMaxScale" [theme]="theme" [logType]="'Neutron'"></app-log-control>
+
+    </div>
+    <div id="neutronLogId" class="graph"></div>
+</div>

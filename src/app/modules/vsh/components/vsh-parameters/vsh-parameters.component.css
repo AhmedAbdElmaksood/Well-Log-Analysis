@@ -1,0 +1,36 @@
+.twoGraphContainer{
+    width:100%;
+    overflow:hidden; 
+    display:block
+}
+
+hr{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.header{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    color: #007bff;
+}
+
+.noDataFoundContainer{
+    width: 30%;
+    height: 65vh;
+    margin: auto;
+    text-align: center;
+}
+
+.noDataFoundContainer h3{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.noDataFoundContainer img{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 3vh;
+}

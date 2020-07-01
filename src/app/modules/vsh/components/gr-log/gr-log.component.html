@@ -1,0 +1,6 @@
+<div [style.width]="containerWidth" class="graphContainner">
+    <app-log-control *ngIf="this.columnOrder.Gr" class="edit" (changeGraphSettings)="graphSettingChange($event)"
+        (defaultSettings)="defaultSettings()" [title]="title" [id]="_id" [color]="color" [minScale]="minScale"
+        [maxScale]="maxScale" [theme]="theme" [logType]="logType"></app-log-control>
+    <ng-content></ng-content>
+</div>

@@ -1,0 +1,13 @@
+<div class="graphContainner">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Gr" (changeGraphSettings)="grGraphSettingChange($event)"
+            (defaultSettings)="grDefaultSettings()" [title]="'Edit Gr Log'" [id]="'gr'" [color]="grColor"
+            [minScale]="grMinScale" [maxScale]="grMaxScale" [theme]="theme" [logType]="'GR'"></app-log-control>
+        <app-log-control *ngIf="this.columnOrder.Caliper" (changeGraphSettings)="caliperGraphSettingChange($event)"
+            (defaultSettings)="caliperDefaultSettings()" [title]="'Edit Caliper Log'" [id]="'caliper'"
+            [color]="caliperColor" [minScale]="caliperMinScale" [maxScale]="caliperMaxScale" [theme]="theme"
+            [logType]="'Caliper'" style="float: right;">
+        </app-log-control>
+    </div>
+    <div id="grCaliperId" class="graph"></div>
+</div>

@@ -1,0 +1,9 @@
+<div class="graphContainner">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Density" (changeGraphSettings)="densityGraphSettingChange($event)"
+            (defaultSettings)="densityDefaultSettings()" [title]="'Edit Density Log'" [id]="'density'" [color]="densityColor"
+            [minScale]="densityMinScale" [maxScale]="densityMaxScale" [theme]="theme" [logType]="'Density'"></app-log-control>
+
+    </div>
+    <div id="densityLogId" class="graph"></div>
+</div>

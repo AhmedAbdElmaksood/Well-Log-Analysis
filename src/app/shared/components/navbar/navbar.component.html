@@ -1,0 +1,74 @@
+<!-- Header section  -->
+<header class="header-section clearfix">
+	<div class="header-top">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+
+				</div>
+				<div class="col-md-6 text-md-right">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-navbar">
+		<!-- Logo -->
+		<a href="/home" class="site-logo">
+			<h3> Well-Log Analysis</h3>
+		</a>
+
+		<nav class="site-nav-menu">
+			<ul>
+				<li routerLink="/home" routerLinkActive="active"><a>Home</a></li>
+				<li routerLink="/about" routerLinkActive="active"><a href="javascript:void">About us</a></li>
+				<li><a>Analysis</a>
+					<ul class="sub-menu">
+						<li routerLink="/well-information/upload-file" routerLinkActive="active"><a>Upload File</a></li>
+						<li routerLink="/well-information/display-well-information" routerLinkActive="active"><a>Well
+								Information</a></li>
+						<li routerLink="/well-information/display-logs" routerLinkActive="active"> <a>Display
+								WellLogs</a></li>
+						<div class="dropdown-divider"></div>
+						<li routerLink="/vsh/vsh-parameters" routerLinkActive="active"> <a>Vsh Parameters</a></li>
+						<li routerLink="/vsh/vsh-equations" routerLinkActive="active"> <a>Vsh Equations</a></li>
+						<div class="dropdown-divider"></div>
+						<li routerLink="/porosity/parameters-form" routerLinkActive="active"> <a>Porosity Parameters</a></li>
+						<li routerLink="/porosity/total-porosity" routerLinkActive="active"><a>Total Porosity</a></li>
+						<li routerLink="/porosity/effective-porosity" routerLinkActive="active"><a>Effective Porosity</a></li>
+						<div class="dropdown-divider"></div>
+						<li routerLink="/water-saturation/parameters-form" routerLinkActive="active"><a>SW Parameters</a></li>
+						<li routerLink="/water-saturation/calculate-saturation" routerLinkActive="active"><a>Water Saturation</a></li>
+					</ul>
+				</li>
+				<li><a routerLink="/contact-us" routerLinkActive="active">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
+			class="slicknav_btn slicknav_open" style="outline: none;"><span class="slicknav_menutxt">MENU</span><span
+				class="slicknav_icon"><span class="slicknav_icon-bar"></span><span
+					class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>
+		<ul class="slicknav_nav" aria-hidden="false" role="menu">
+			<li class="active"><a routerLink="/home" routerLinkActive="active" role="menuitem" tabindex="0">Home</a>
+			</li>
+			<li><a routerLink="/about" routerLinkActive="active" role="menuitem" tabindex="0">About us</a></li>
+			<li class="slicknav_collapsed slicknav_parent">
+				<a role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row"
+					style="outline: none;"><a tabindex="0">Analysis</a>
+					<span class="slicknav_arrow"><i class="fa fa-angle-down"></i></span></a>
+				<ul class="sub-menu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+					<li><a href="elements.html" role="menuitem" tabindex="0">Elements</a></li>
+				</ul>
+			</li>
+
+			<li><a routerLink="/contact-us" routerLinkActive="active" role="menuitem" tabindex="0">Contact</a></li>
+			<!-- <li class="search-switch-warp"><button class="search-switch"><i class="fa fa-search"></i></button></li> -->
+
+		</ul>
+	</div>
+
+</header>
+<!-- Header section end  -->

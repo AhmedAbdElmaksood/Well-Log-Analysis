@@ -1,0 +1,29 @@
+
+.modal-header {
+    background-color: #17172d;
+}
+
+.modal-footer{
+    background-color: #17172d;
+}
+
+.modal-title {
+    color: aliceblue;
+}
+
+.modal-header .close {
+    color: aqua;
+}
+
+label {
+    font-weight: 600;
+}
+
+.icon{
+    margin-right: 15px;
+}
+
+.fa-sliders:before {
+    color: aliceblue;
+    font-size: 30px;
+}

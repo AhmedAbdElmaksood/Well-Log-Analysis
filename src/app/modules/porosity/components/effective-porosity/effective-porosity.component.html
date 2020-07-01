@@ -1,0 +1,35 @@
+
+<h1 class="header">Effective Porosity</h1>
+<hr>
+
+<div class="logsContainer" *ngIf="columnOrder?.Gr || columnOrder?.Density || columnOrder?.Neutron">
+    <app-gr-log *ngIf="columnOrder.Gr" [getCurrent]="true" [enableCrosshair]="false" [containerWidth]="'20%'" [divId]="'CanvasDiv'"
+        [title]="'Edit'+effectiveVariables.vshMethodName+'Response Log'"
+        [logType]="effectiveVariables.vshMethodName +' Response'" [id]="effectiveVariables.vshMethodName"
+        [xAxisTitle]="'Vsh (%)'">
+        <div id="CanvasDiv"></div>
+    </app-gr-log>
+
+    <app-density-neutron-log *ngIf="columnOrder.Density || columnOrder.Neutron" [divId]="'effectiveDensityNeutron'" [enableCross]="true">
+        <div id="effectiveDensityNeutron" class="graph"></div>
+    </app-density-neutron-log>
+
+    <app-total-porosity-log *ngIf="columnOrder.Density && columnOrder.Neutron"  [divId]="'totalPorosityLogIdTwo'">
+        <div id="totalPorosityLogIdTwo" class="graph"></div>
+    </app-total-porosity-log>
+
+    <app-effective-porosity-log *ngIf="columnOrder.Density && columnOrder.Neutron && columnOrder.Gr"  [divId]="'effectivePorosityPage'" [containerWidth]="'20%'" [paramiterChangeEvent]="eventsSubject.asObservable()" [iseffectiveVariablesChanged]="isEffectiveVariablesSubmitted">
+        <div id="effectivePorosityPage" class="graph"></div>
+    </app-effective-porosity-log>
+
+    <app-effective-porosity-variables-form *ngIf="columnOrder.Density && columnOrder.Neutron && columnOrder.Gr" (changeVsh)="receiveData($event)" (submit)="submitEvent()">
+    </app-effective-porosity-variables-form>
+</div>
+
+<div *ngIf="!columnOrder?.Gr && !columnOrder?.Density && !columnOrder?.Neutron">
+    <div class="noDataFoundContainer">
+        <img src="../../../../../assets/img/noDataFound.png">
+        <h3>No Related Data found</h3>
+        <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Data</button>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="graphContainner">
+    <div class="edit">
+        <app-log-control *ngIf="this.columnOrder.Density && this.columnOrder.Neutron" (changeGraphSettings)="totalPorosityGraphSettingChange($event)"
+            (defaultSettings)="totalPorosityDefaultSettings()" [title]="'Edit Total Porosity'" [id]="'totalPorosity'" [color]="totalPorosityColor"
+            [minScale]="totalPorosityMinScale" [maxScale]="totalPorosityMaxScale" [theme]="theme" [logType]="'Total Porosity'"></app-log-control>
+    </div>
+    <ng-content></ng-content>
+</div>

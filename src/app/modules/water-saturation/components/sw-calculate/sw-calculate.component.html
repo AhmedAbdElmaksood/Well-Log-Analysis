@@ -1,0 +1,22 @@
+
+<h1 class="header">Water Saturation</h1>
+<hr>
+
+<div class="logsContainer" *ngIf="columnOrder?.Gr || columnOrder?.Density || columnOrder?.Neutron || columnOrder?.Lld">
+    <app-lld-log *ngIf="columnOrder.Lld" [containerWidth]="'33.333333%'" [divId]="'waterSaturationLld'">
+        <div id="waterSaturationLld" class="graph"></div>
+    </app-lld-log>
+    <app-effective-porosity-log *ngIf="columnOrder.Gr && columnOrder.Density && columnOrder.Neutron" [divId]="'waterSaturationPage'" [containerWidth]="'33.333333%'"> 
+        <div id="waterSaturationPage" class="graph"></div>
+    </app-effective-porosity-log>
+  <app-sw-log *ngIf="columnOrder.Gr && columnOrder.Density && columnOrder.Neutron && columnOrder.Lld"></app-sw-log>
+</div>
+
+<div *ngIf="!columnOrder?.Gr && !columnOrder?.Density && !columnOrder?.Neutron && !columnOrder?.Lld">
+    <div class="noDataFoundContainer">
+        <img src="../../../../../assets/img/noDataFound.png">
+        <h3>No Related Logs found</h3>
+        <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Logs</button>
+    </div>
+</div>
+

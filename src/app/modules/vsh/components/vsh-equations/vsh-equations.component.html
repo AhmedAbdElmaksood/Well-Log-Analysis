@@ -1,0 +1,42 @@
+<h1 class="header">Vsh Equations</h1>
+<hr>
+
+<div class="twoGraphContainer" *ngIf="columnOrder?.Gr">
+    <app-gr-log [getCurrent]="true" [enableCrosshair]="false" [id]="'linear'" [containerWidth]="'20%'"
+        [paramiterChangeEvent]="eventsSubject.asObservable()" [divId]="'linearResponseCanvasDiv'"
+        [title]="'Edit Linear Response Log'" [logType]="'Linear Response'" [xAxisTitle]="'Vsh (%)'">
+        <div style="height:600vh;" id="linearResponseCanvasDiv"></div>
+    </app-gr-log>
+
+    <app-gr-log [getCurrent]="true" [enableCrosshair]="false" [id]="'Larionov'" [containerWidth]="'20%'"
+        [paramiterChangeEvent]="eventsSubject.asObservable()" [divId]="'LarionovCanvasDiv'"
+        [title]="'Edit Larionov Log'" [logType]="'Larionov'" [xAxisTitle]="'Vsh (%)'">
+        <div style="height:600vh;" id="LarionovCanvasDiv"></div>
+    </app-gr-log>
+
+    <app-gr-log [getCurrent]="true" [enableCrosshair]="false" [id]="'Steiber'" [containerWidth]="'20%'"
+        [paramiterChangeEvent]="eventsSubject.asObservable()" [divId]="'SteiberCanvasDiv'"
+        [title]="'Edit Steiber Log'" [logType]="'Steiber'" [xAxisTitle]="'Vsh (%)'">
+        <div style="height:600vh;" id="SteiberCanvasDiv"></div>
+    </app-gr-log>
+
+    <app-gr-log [getCurrent]="true" [enableCrosshair]="false" [id]="'Older'" [containerWidth]="'20%'"
+        [paramiterChangeEvent]="eventsSubject.asObservable()" [divId]="'OlderCanvasDiv'"
+        [title]="'Edit Older Log'" [logType]="'Older'" [xAxisTitle]="'Vsh (%)'">
+        <div style="height:600vh;" id="OlderCanvasDiv"></div>
+    </app-gr-log>
+
+    <app-gr-log [getCurrent]="true" [enableCrosshair]="false" [id]="'Clavier'" [containerWidth]="'20%'"
+        [paramiterChangeEvent]="eventsSubject.asObservable()" [divId]="'ClavierCanvasDiv'"
+        [title]="'Edit Clavier Log'" [logType]="'Clavier'" [xAxisTitle]="'Vsh (%)'">
+        <div style="height:600vh;" id="ClavierCanvasDiv"></div>
+    </app-gr-log>
+</div>
+
+<div *ngIf="!columnOrder?.Gr">
+    <div class="noDataFoundContainer">
+        <img src="../../../../../assets/img/noDataFound.png">
+        <h3>No Related Logs found</h3>
+        <button routerLink="/well-information/upload-file" class="btn btn-primary">Add Related Logs</button>
+    </div>
+</div>

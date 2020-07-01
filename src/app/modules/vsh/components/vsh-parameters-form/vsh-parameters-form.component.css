@@ -1,0 +1,53 @@
+.graphContainner{
+    width:30%;
+    min-width:200px;
+    overflow:hidden; 
+    float: right;; 
+    display:block;
+}
+
+.graphContainner h1{
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    color: #007bff;
+    text-align: center;
+}
+
+.graphContainner hr{
+    width: 80%;
+}
+
+.labelInput{
+    margin-top: 5%;
+}
+
+.labelInput label{
+    float: left;
+    margin-right: 5%;
+    width: 65px;
+    font-weight: 600;
+}
+
+.labelInput input{
+    width: 70%;
+}
+
+.buttons{
+    margin-top: 5%;
+}
+
+#go{
+    width: 65px;
+    margin-right: 5%;
+}
+
+#submit{
+    width: 70%;
+}
+
+#Reset{
+    width: 70%;
+    margin-left: 21%;
+    margin-top: 3%;
+}

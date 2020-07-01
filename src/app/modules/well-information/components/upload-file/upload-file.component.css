@@ -1,0 +1,62 @@
+.container{
+    width: 30%;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+}
+
+.header{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    color: #007bff;
+}
+
+.upload{
+    margin-top: 30px;
+}
+
+.go{
+    float: right;
+}
+
+.logLabel{
+    float: left;
+    font-weight: 500;
+}
+
+.logDropDown{
+    float: right;
+    width: 75%;
+}
+
+.form-group{
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.fileInput{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: none;
+}
+
+.alert-danger{
+    margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+    .container{
+        width: 60%;
+    }
+   
+}

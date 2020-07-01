@@ -1,0 +1,203 @@
+<div class="container">
+    <h1 class="header">File Upload</h1>
+    <hr>
+    <div class="upload">
+        <div class="input-group">
+            <label class="input-group-btn">
+                <span class="btn btn-primary">
+                    Browse
+                    <input class="fileInput" type="file" name="file" (change)="handleFileInput($event.target.files)">
+                </span>
+            </label>
+            <input type="text" class="form-control" [value]="file?.name || ''" readonly>
+        </div>
+        <button [disabled]="fileType != 'las' || (this.columnOrder?.Depth == undefined || this.columnOrder?.Gr == undefined && this.columnOrder?.Caliper == undefined && this.columnOrder?.Density == undefined && this.columnOrder?.Neutron == undefined && this.columnOrder?.Lld == undefined && this.columnOrder?.Dt == undefined && this.columnOrder?.Sp == undefined)" class="btn btn-success" (click)="process()">Process</button>
+        <button routerLink="/well-information/display-well-information" class="btn btn-primary go">Go</button>
+        <div *ngIf="(this.columnOrder?.Depth == undefined || this.columnOrder?.Gr == undefined && this.columnOrder?.Caliper == undefined && this.columnOrder?.Density == undefined && this.columnOrder?.Neutron == undefined && this.columnOrder?.Lld == undefined && this.columnOrder?.Dt == undefined && this.columnOrder?.Sp == undefined) && fileType" class="alert alert-danger" role="alert">
+            Depth column must be selected with at least one other column
+        </div>
+        <hr />
+
+        <div class="form-group">
+            <label class="logLabel" for="Depth">Depth : </label>
+            <select (change)="selectColumn($event.target.value, 'depth')" class="form-control logDropDown" id="Depth">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="logLabel" for="GR">GR : </label>
+            <select class="form-control logDropDown" (change)="selectColumn($event.target.value, 'gr')"  id="GR">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="logLabel" for="Caliper">Caliper : </label>
+            <select class="form-control logDropDown" (change)="selectColumn($event.target.value, 'caliper')"  id="Caliper">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label class="logLabel" for="Caliper">SP : </label>
+            <select class="form-control logDropDown" (change)="selectColumn($event.target.value, 'sp')"  id="SP">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label class="logLabel" for="Density">Density : </label>
+            <select class="form-control logDropDown" (change)="selectColumn($event.target.value, 'density')"  id="Density">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label class="logLabel" for="Neutron">Neutron : </label>
+            <select class="form-control logDropDown" (change)="selectColumn($event.target.value, 'neutron')"  id="Neutron">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label class="logLabel" for="Caliper">DT : </label>
+            <select class="form-control logDropDown" (change)="selectColumn($event.target.value, 'dt')"  id="DT">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label class="logLabel" for="Caliper">LLD : </label>
+            <select class="form-control logDropDown" (change)="selectColumn($event.target.value, 'lld')"  id="LLD">
+                <option value="-1" selected>Open this select menu</option>
+                <option value="0">Column 1</option>
+                <option value="1">Column 2</option>
+                <option value="2">Column 3</option>
+                <option value="3">Column 4</option>
+                <option value="4">Column 5</option>
+                <option value="5">Column 6</option>
+                <option value="6">Column 7</option>
+                <option value="7">Column 8</option>
+                <option value="8">Column 9</option>
+                <option value="9">Column 10</option>
+                <option value="10">Column 11</option>
+                <option value="11">Column 12</option>
+                <option value="12">Column 13</option>
+                <option value="13">Column 14</option>
+                <option value="14">Column 15</option>
+            </select>
+          </div>
+    </div>
+
+</div>

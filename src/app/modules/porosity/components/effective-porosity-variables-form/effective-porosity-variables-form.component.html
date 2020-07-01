@@ -1,0 +1,33 @@
+<div class="graphContainner">
+    <h1 class="header">Effective Porosity Variables</h1>
+    <hr>
+
+    <form class="myContainer" [formGroup]="variablesForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-row  align-content-center">
+            <div class="label lbl"> Bulk density of shale:</div>
+            <div class="inputParent">
+                <input formControlName="bulkDensity" class="form-control" type="number"
+                    [(ngModel)]=effectiveVariables.bulkDensity>
+            </div>
+        </div>
+        <br>
+        <div class="form-row  align-content-center">
+            <div class="label lbl"> Which Vsh Method to use:</div>
+            <div class="dropdown">
+                <select class="dropdown form-control" (change)="changeVshMethod($event)"
+                    formControlName="vshMethodName">
+                    <option class="dropdown-item" *ngFor="let vshMethod of VshMethods"
+                        [selected]="vshMethod == effectiveVariables.vshMethodName">
+                        {{vshMethod}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a routerLink="/water-saturation/parameters-form" type="button" class="btn btn-success">GO</a>
+        </div>
+    </form>
+</div>

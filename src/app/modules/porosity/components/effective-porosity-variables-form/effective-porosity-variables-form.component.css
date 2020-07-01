@@ -1,0 +1,53 @@
+hr{
+    width: 95%;
+}
+
+.header{
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: #007bff;
+    text-align: center;
+}
+
+.myContainer{
+    margin:auto;
+    width: 95%;
+    margin-left: 2%;
+}
+
+.lbl{
+   font-weight:bold;
+}
+
+.inputParent, .dropdown{
+    width: 100%;
+}
+
+h1{
+    font-size: 17px;
+}
+
+.graphContainner{
+    width: 18%;
+    min-width: 200px;
+    overflow: hidden;
+    float: left;
+    display: block;
+    margin-left: 1%;
+}
+
+.btn-primary{
+    width: 49%;
+    margin-right: 1%;
+}
+
+.btn-success{
+    width: 49%;
+    margin-left: 1%;
+}
+@media (max-width: 900px) {
+    .graph{
+      height:100vh; 
+    }
+   }
